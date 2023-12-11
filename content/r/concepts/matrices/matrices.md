@@ -300,3 +300,25 @@ This example results in the following output:
 ```
 
 Matrices are often used to represent data sets or mathematical models in R. They are commonly employed in statistical analysis, data manipulation, linear algebra, and machine learning tasks. With the availability of powerful packages like `matrixStats`, `Matrix`, and `dplyr`, working with matrices in R becomes even more efficient and flexible.
+
+If one wants to find the eigenvectors or eigenvalues, they need an X by X matrix.
+
+```{r}
+matrix1 <- matrix(c(1:9), nrow = 3)
+print(matrix1)
+print(eigen(matrix1))
+```
+
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+eigen() decomposition
+$values
+[1]  1.611684e+01 -1.116844e+00 -5.700691e-16
+
+$vectors
+           [,1]       [,2]       [,3]
+[1,] -0.4645473 -0.8829060  0.4082483
+[2,] -0.5707955 -0.2395204 -0.8164966
+[3,] -0.6770438  0.4038651  0.4082483
